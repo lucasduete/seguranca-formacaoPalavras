@@ -22,5 +22,12 @@
 <p>A cada sílaba formada (consoante + vogal) cria-se uma variavel para sílaba, quando for criada a segunda sílaba verifica se é igual com a primeira, se for dirente cria-se a terceira sílaba e verifica-se se ela é diferente de todas as outas, caso seja imprime a palavra mas caso em qualquer uma dessas condições as sílabas sejam iguais a palavra é ignorada. </p>
 <br/><br/>
 
+<h2>Uso:</h2>
 
+<p>Utilize a Opção -q para definir qual a questão que será executada</p>
 
+<p>Exemplo de uso para questão 3</p>
+`./main -q 3`
+
+<p>Exemplo de uso para questão 4</p>
+`./main -q 4`
