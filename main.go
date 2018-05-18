@@ -33,12 +33,29 @@ func formWordsWithoutRepetition() {
 	var count int = 0
 	for _, letra1 := range consoantes {
 		for _, letra2 := range vogais {
+
+			primeiraSilaba := letra1 + letra2
+
 			for _, letra3 := range consoantes {
 				for _, letra4 := range vogais {
-					if !(strings.Compare(letra1, letra3) == 0 && strings.Compare(letra2, letra4) == 0) {
-						count++
-						fmt.Printf("%s%s%s%s\n", letra1, letra2, letra3, letra4)
+
+					segundaSilaba := letra3 + letra4
+
+					if strings.Compare(primeiraSilaba, segundaSilaba) != 0 {
+						for _, letra5 := range consoantes {
+							for _, letra6 := range vogais {
+
+								terceiraSilaba := letra5 + letra6
+
+								if strings.Compare(terceiraSilaba, primeiraSilaba) != 0 &&
+									strings.Compare(terceiraSilaba, segundaSilaba) != 0 {
+										count++
+										fmt.Printf("%s%s%s%s%s%s\n", letra1, letra2, letra3, letra4, letra5, letra6)
+								}
+							}
+						}
 					}
+
 				}
 			}
 		}
